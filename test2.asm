@@ -1,0 +1,49 @@
+; test-2 questions
+; The input is given we want desired output
+org 100h      
+; Input           ; expected output
+MOV [2000H], 01H  ; 06h
+MOV [2001H], 02H  ; 07h
+MOV [2002H], 03H  ; 05h
+MOV [2003H], 04H  ; 01h
+MOV [2004H], 05H  ; 02h
+MOV [2005H], 06H  ; 04h
+MOV [2006H], 07H  ; 03h
+
+; Output
+MOV AL, [2005H]
+MOV [3000H], AL
+MOV AL, [2006H]
+MOV [3001H], AL
+MOV AL, [2004H]
+MOV [3002H], AL
+MOV AL, [2000H]
+MOV [3003H], AL
+MOV AL, [2001H]
+MOV [3004H], AL
+MOV AL, [2003H]
+MOV [3005H], AL
+MOV AL, [2002H]
+MOV [3006H], AL
+
+
+MOV AL, [3000H]
+MOV [2000H], AL
+MOV AL, [3001H]
+MOV [2001H], AL
+MOV AL, [3002H]
+MOV [2002H], AL
+MOV AL, [3003H]
+MOV [2003H], AL
+MOV AL, [3004H]  
+MOV [2004H], AL
+MOV AL, [3005H]
+MOV [2005H], AL
+MOV AL, [3006H]
+MOV [2006H], AL
+HLT
+ret
+
+
+
+

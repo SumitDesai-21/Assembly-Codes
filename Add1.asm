@@ -1,9 +1,0 @@
-org 100h
-
-MOV AL, 01H
-MOV BL, 02H
-ADD AL, BL
-MOV [2000H], AL
-HLT
-
-ret
