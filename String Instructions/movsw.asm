@@ -14,4 +14,5 @@ MOVSW ; move string word
 HLT
 
 ret
-; SB - String bytes (incremented/decremented by 1), SW - String words (incremented/decremented by 2)
+; SB - String bytes (incremented/decremented by 1), 
+; SW - String words (incremented/decremented by 2)
