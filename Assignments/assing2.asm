@@ -1,0 +1,112 @@
+; Q1
+org 100h
+
+; 8-bit Addition
+MOV AL, 15H
+MOV BL, 27H
+ADD AL, BL
+
+; 8-bit Subtraction
+MOV AL, 3CH
+MOV BL, 12H
+SUB AL, BL
+
+; 16-bit Addition
+MOV AX, 1234H
+MOV BX, 4321H
+ADD AX, BX
+
+; 16-bit Subtraction
+MOV AX, 5678H
+MOV BX, 1234H
+SUB AX, BX
+
+HLT
+RET
+
+; Q.2
+org 100h
+; 32 bit addition 
+MOV AX, 1234H
+MOV DX, 5678H
+MOV BX, 4321H
+MOV CX, 8765H
+
+ADD AX, BX
+ADC DX, CX
+              
+; 32 bit subtraction               
+              
+MOV AX, 5678H
+MOV DX, 1234H
+MOV BX, 2345H
+MOV CX, 3456H
+
+SUB AX, BX
+SBB DX, CX
+
+HLT
+RET
+
+; Q.3
+org 100h
+
+MOV AX, 1111H
+MOV BX, 2222H
+MOV CX, 3333H
+MOV DX, 4444H   ; First 64-bit number
+
+MOV SI, 5555H
+MOV DI, 6666H
+MOV BP, 7777H
+MOV SP, 8888H   ; Second 64-bit number
+
+ADD AX, SI
+ADC BX, DI
+ADC CX, BP
+ADC DX, SP
+
+MOV AX, 9999H
+MOV BX, AAAAH
+MOV CX, BBBBH
+MOV DX, CCCCH   ; Another 64-bit number
+
+MOV SI, 1111H
+MOV DI, 2222H
+MOV BP, 3333H
+MOV SP, 4444H   ; Another 64-bit number
+
+SUB AX, SI
+SBB BX, DI
+SBB CX, BP
+SBB DX, SP
+
+HLT
+RET
+
+; Q.4
+org 100h
+
+MOV CX, 05H
+MOV SI, 2000H
+MOV AX, 0000H
+
+SUM8:
+MOV BL, [SI]
+ADD AX, BX
+INC SI
+DEC CX
+JNZ SUM8
+
+MOV CX, 03H
+MOV SI, 3000H
+MOV DX, 0000H
+
+SUM16:
+ADD DX, [SI]
+ADD SI, 2
+DEC CX
+JNZ SUM16
+
+HLT
+RET
