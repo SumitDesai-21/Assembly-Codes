@@ -34,7 +34,7 @@ end main
 .model small
 .stack 100h
 .data
-    arr db 9, 2, 8, 4, 5, 7
+    arr db 9, 2, 8, 4, 5, 3
 .code
     main proc
         mov ax, @data
