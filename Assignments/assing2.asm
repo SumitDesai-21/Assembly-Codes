@@ -1,4 +1,4 @@
-; Q1
+; Q1 Write an ALP to perform 8-bit addition, 8-bit subtraction, 16-bit addition and 16-bit subtraction.
 org 100h
 
 ; 8-bit Addition
@@ -24,7 +24,7 @@ SUB AX, BX
 HLT
 RET
 
-; Q.2
+; Q.2 Write an ALP to perform 32-bit addition and subtraction
 org 100h
 ; 32 bit addition 
 MOV AX, 1234H
@@ -48,7 +48,7 @@ SBB DX, CX
 HLT
 RET
 
-; Q.3
+; Q.3 Write an ALP to perform multibyte addition and subtraction.
 org 100h
 
 MOV AX, 1111H
@@ -61,6 +61,7 @@ MOV DI, 6666H
 MOV BP, 7777H
 MOV SP, 8888H   ; Second 64-bit number
 
+; 64-bit addition
 ADD AX, SI
 ADC BX, DI
 ADC CX, BP
@@ -76,6 +77,7 @@ MOV DI, 2222H
 MOV BP, 3333H
 MOV SP, 4444H   ; Another 64-bit number
 
+; 64-bit subtraction
 SUB AX, SI
 SBB BX, DI
 SBB CX, BP
@@ -84,7 +86,7 @@ SBB DX, SP
 HLT
 RET
 
-; Q.4
+; Q.4 Write an ALP to perform sum of series of 8 bit and 16-bit number
 org 100h
 
 MOV CX, 05H
