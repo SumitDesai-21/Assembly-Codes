@@ -164,7 +164,7 @@ main proc
 main endp
 end main
 
-; Q.8
+; Q.8 Multiplication by rotation and addition
 .org 100h
 
 start:
