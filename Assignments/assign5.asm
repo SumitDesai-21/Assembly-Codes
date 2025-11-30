@@ -87,7 +87,7 @@ ret
 org 100h 
 ; shift left 
 MOV AX, 5555H
-SHR AX, 01H
+SHL AX, 01H
 
 ; shift right
 MOV BX, 0AAAAH
